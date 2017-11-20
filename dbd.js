@@ -59,7 +59,7 @@ function beginPaimai(paimaiId,maxprice,lastTime,isJianTing){
 			//如果当前价格小于设置的最高价格，就拍卖
 			if(paimaiInfo.currentPrice < maxprice){
 				//正式使用时改为paimaiInfo.currentPrice + 1
-				sendPrice(paimaiId,paimaiInfo.currentPrice + 1);
+				sendPrice(paimaiId,maxprice);
 				//上线时将下面一行取消
 				clearInterval(IntervalID);
 			}else{
